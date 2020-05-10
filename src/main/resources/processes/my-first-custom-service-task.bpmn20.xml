@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:flowable="http://flowable.org/bpmn" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:omgdc="http://www.omg.org/spec/DD/20100524/DC" xmlns:omgdi="http://www.omg.org/spec/DD/20100524/DI" typeLanguage="http://www.w3.org/2001/XMLSchema" expressionLanguage="http://www.w3.org/1999/XPath" targetNamespace="http://www.flowable.org/processdef">
+  <process id="myFirstCustomServiceTask" name="My First Custom Service Task" isExecutable="true">
+    <documentation>This is an example of my first custom service task</documentation>
+    <startEvent id="startEvent1" flowable:formFieldValidation="true"></startEvent>
+    <sequenceFlow id="sid-E02AD7E3-FE89-462C-86E5-F28860E7D03A" sourceRef="startEvent1" targetRef="sid-DD49004C-1B9B-4CD2-96C6-263B49A91B04"></sequenceFlow>
+    <serviceTask id="sid-DD49004C-1B9B-4CD2-96C6-263B49A91B04" name="My First Delegate" flowable:delegateExpression="${myFirstDelegate}"></serviceTask>
+    <endEvent id="sid-FBAC523F-3400-43D2-B278-9F2068353C8F"></endEvent>
+    <sequenceFlow id="sid-30C0434C-E743-4CE7-9BB8-C1AA92FAEAC2" sourceRef="sid-DD49004C-1B9B-4CD2-96C6-263B49A91B04" targetRef="sid-FBAC523F-3400-43D2-B278-9F2068353C8F"></sequenceFlow>
+  </process>
+  <bpmndi:BPMNDiagram id="BPMNDiagram_myFirstCustomServiceTask">
+    <bpmndi:BPMNPlane bpmnElement="myFirstCustomServiceTask" id="BPMNPlane_myFirstCustomServiceTask">
+      <bpmndi:BPMNShape bpmnElement="startEvent1" id="BPMNShape_startEvent1">
+        <omgdc:Bounds height="30.0" width="30.0" x="100.0" y="154.3847336769104"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="sid-DD49004C-1B9B-4CD2-96C6-263B49A91B04" id="BPMNShape_sid-DD49004C-1B9B-4CD2-96C6-263B49A91B04">
+        <omgdc:Bounds height="80.0" width="100.0" x="175.0" y="129.3847336769104"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="sid-FBAC523F-3400-43D2-B278-9F2068353C8F" id="BPMNShape_sid-FBAC523F-3400-43D2-B278-9F2068353C8F">
+        <omgdc:Bounds height="28.0" width="28.0" x="320.0" y="155.3847336769104"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge bpmnElement="sid-30C0434C-E743-4CE7-9BB8-C1AA92FAEAC2" id="BPMNEdge_sid-30C0434C-E743-4CE7-9BB8-C1AA92FAEAC2">
+        <omgdi:waypoint x="274.949999999996" y="169.3847336769104"></omgdi:waypoint>
+        <omgdi:waypoint x="320.0" y="169.3847336769104"></omgdi:waypoint>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="sid-E02AD7E3-FE89-462C-86E5-F28860E7D03A" id="BPMNEdge_sid-E02AD7E3-FE89-462C-86E5-F28860E7D03A">
+        <omgdi:waypoint x="129.9499984899576" y="169.3847336769104"></omgdi:waypoint>
+        <omgdi:waypoint x="174.9999999999917" y="169.3847336769104"></omgdi:waypoint>
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</definitions>
