@@ -2,6 +2,31 @@
   
 In this tutorial, we will be implementing a custom service task in Flowable 
 
+## License
+The MIT License (MIT)  
+
+Copyright (c) 2020, canchito-dev  
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the “Software”), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:  
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.  
+
+THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+## Contribute Code
+If you would like to become an active contributor to this project please follow these simple steps:
+
+1.  Fork it
+2.  Create your feature branch
+3.  Commit your changes
+4.  Push to the branch
+5.  Create new Pull Request
+
+## What you’ll need
+*   About 40 minutes
+*   A favorite IDE. In this post, we use [Intellij Community](https://www.jetbrains.com/idea/download/index.html)
+*   [JDK 7](http://www.oracle.com/technetwork/java/javase/downloads/index.html) or later. It can be made to work with JDK6, but it will need configuration tweaks. Please check the Spring Boot documentation
+
 ## Starting with Spring Initializr  
   
 For all Spring applications, it is always a good idea to start with the [Spring Initializr](https://start.spring.io/). The Initializr is an excellent option for pulling in all the dependencies you need for an application and does a lot of the setup for you. This example needs only the Spring Web, and H2 Database dependency. The following image shows the Initializr set up for this sample project:  
@@ -65,6 +90,7 @@ The following listing shows the `pom.xml` file that is created when you choose M
 			<artifactId>spring-boot-starter-tomcat</artifactId>   
 		</dependency>
 		<!-- Starter for using Tomcat as the embedded servlet container. Default servlet container starter used by spring-boot-starter-web -->   
+
 		<!-- Starter for testing Spring Boot applications with libraries including JUnit, Hamcrest and Mockito -->      
 		<dependency>    
 			<groupId>org.springframework.boot</groupId>    
