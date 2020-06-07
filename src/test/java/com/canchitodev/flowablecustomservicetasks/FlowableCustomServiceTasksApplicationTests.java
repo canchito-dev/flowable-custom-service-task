@@ -22,7 +22,7 @@ class FlowableCustomServiceTasksApplicationTests {
 	private HistoryService historyService;
 
 	@Test
-	@Deployment(resources = "processes/my-first-custom-service-task.bpmn20.bpmn")
+	@Deployment(resources = "processes/my-first-custom-service-task.bpmn20.xml")
 	void myFirstCustomServiceTaskTest() {
 		// Start a new process instance
 		ProcessInstance processInstance = this.runtimeService.startProcessInstanceByKey("myFirstCustomServiceTask");
@@ -37,7 +37,7 @@ class FlowableCustomServiceTasksApplicationTests {
 	}
 
 	@Test
-	@Deployment(resources = "processes/my-first-field-injection.bpmn20.bpmn")
+	@Deployment(resources = "processes/my-first-field-injection.bpmn20.xml")
 	void myFirstFieldInjectionTest() {
 		// Start a new process instance
 		ProcessInstance processInstance = this.runtimeService.startProcessInstanceByKey("myFirstFieldInjection");
